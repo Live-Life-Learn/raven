@@ -24,6 +24,8 @@ class RavenSettings(Document):
 		company_workspace_mapping: DF.Table[RavenHRCompanyWorkspace]
 		department_channel_type: DF.Literal["Public", "Private"]
 		enable_ai_integration: DF.Check
+		enable_user_theme: DF.Check
+		global_theme: DF.Code
 		oauth_client: DF.Link | None
 		openai_api_key: DF.Password | None
 		openai_organisation_id: DF.Data | None
@@ -43,3 +45,7 @@ class RavenSettings(Document):
 				# Check if the company exists since it's a Data field
 				if not frappe.db.exists("Company", row.company):
 					frappe.throw(f"Company {row.company} does not exist.")
+
+		# Theming validation
+		if not self.enable_user_theme and not self.global_theme:
+			frappe.throw(_("Personal themes are disabled, but no global theme is set. Please configure a global theme."))
