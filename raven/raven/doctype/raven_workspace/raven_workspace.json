@@ -12,7 +12,8 @@
   "description",
   "column_break_svnf",
   "logo",
-  "only_admins_can_create_channels"
+  "only_admins_can_create_channels",
+  "theme"
  ],
  "fields": [
   {
@@ -58,6 +59,13 @@
    "fieldname": "only_admins_can_create_channels",
    "fieldtype": "Check",
    "label": "Only allow admins to create channels in the workspace"
+  },
+  {
+    "fieldname": "theme",
+    "fieldtype": "Link",
+    "label": "Workspace Theme",
+    "options": "Raven User Theme",
+    "description": "Custom theme applied to this workspace (overrides global theme)"
   }
  ],
  "index_web_pages_for_search": 1,

@@ -27,7 +27,10 @@
   "raven_mobile_tab",
   "oauth_client",
   "push_notifications_tab",
-  "push_notification_service"
+  "push_notification_service",
+  "theming_tab",
+  "enable_user_theme",
+  "global_theme"
  ],
  "fields": [
   {
@@ -157,6 +160,25 @@
    "fieldtype": "Select",
    "label": "Push Notification Service",
    "options": "Frappe Cloud\nRaven"
+  },
+  {
+    "fieldname": "theming_tab",
+    "fieldtype": "Tab Break",
+    "label": "Theming"
+  },
+  {
+    "default": "1",
+    "fieldname": "enable_user_theme",
+    "fieldtype": "Check",
+    "label": "Enable User Themes",
+    "description": "Allow users to apply personal themes overriding global/workspace themes"
+  },
+  {
+    "fieldname": "global_theme",
+    "fieldtype": "Code",
+    "options": "JSON",
+    "label": "Global Theme JSON",
+    "description": "JSON configuration for the global theme"
   }
  ],
  "index_web_pages_for_search": 1,
