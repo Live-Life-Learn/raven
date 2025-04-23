@@ -1,0 +1,38 @@
+:root {
+  /* Default fallback values for theme variables */
+  --background: #ffffff;
+  --text: #1a1a1a;
+  --sidebar_bg: #2f3b45;
+  --sidebar_text: #ffffff;
+  --accent: #007bff;
+
+  /* Optional future vars */
+  --mention: #f5a623;
+  --header_bg: #1c1c1e;
+  --header_text: #f5f5f5;
+  --button_primary: #007bff;
+  --button_text: #ffffff;
+  --input_bg: #f0f0f0;
+  --input_border: #ccc;
+}
+
+body {
+  background: var(--background);
+  color: var(--text);
+}
+
+.sidebar {
+  background: var(--sidebar_bg);
+  color: var(--sidebar_text);
+}
+
+a, .link, .button-accent {
+  color: var(--accent);
+}
+
+.mention {
+  background: var(--mention);
+  color: #fff;
+}
+
+/* Extend as needed for other UI components */
